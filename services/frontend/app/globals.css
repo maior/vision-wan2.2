@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    @apply border-slate-200;
+  }
+
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-white text-slate-900 font-sans;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+}
+
+@layer components {
+  /* Professional Card */
+  .card {
+    @apply bg-white border border-slate-200 rounded-lg shadow-sm;
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-md hover:border-slate-300;
+  }
+
+  /* Professional Button */
+  .btn {
+    @apply inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus-visible:ring-primary-600;
+  }
+
+  .btn-secondary {
+    @apply bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 focus-visible:ring-slate-500;
+  }
+
+  .btn-ghost {
+    @apply text-slate-600 hover:bg-slate-100 focus-visible:ring-slate-500;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-sm rounded-md;
+  }
+
+  .btn-md {
+    @apply px-4 py-2 text-sm rounded-md;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 text-base rounded-lg;
+  }
+
+  /* Status Badge */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply bg-success-50 text-success-700 border border-success-200;
+  }
+
+  .badge-warning {
+    @apply bg-warning-50 text-warning-700 border border-warning-200;
+  }
+
+  .badge-error {
+    @apply bg-error-50 text-error-700 border border-error-200;
+  }
+
+  .badge-info {
+    @apply bg-primary-50 text-primary-700 border border-primary-200;
+  }
+
+  .badge-neutral {
+    @apply bg-slate-50 text-slate-700 border border-slate-200;
+  }
+
+  /* Input */
+  .input {
+    @apply w-full px-3 py-2 text-sm border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  /* Section */
+  .section {
+    @apply bg-white border border-slate-200 rounded-lg p-6;
+  }
+}

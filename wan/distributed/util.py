@@ -9,6 +9,9 @@ def init_distributed_group():
     if not dist.is_initialized():
         dist.init_process_group(backend='nccl')
 
+    # Return rank and world_size for training scripts
+    return dist.get_rank(), dist.get_world_size()
+
 
 def get_rank():
     return dist.get_rank()

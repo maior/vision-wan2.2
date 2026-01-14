@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/maiordba/projects/vision/Wan2.2/scripts/convert_images_gpu.py", line 13, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'

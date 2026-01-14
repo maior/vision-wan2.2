@@ -1,0 +1,8 @@
+{
+  "total_samples": 50000,
+  "num_gpus": 1,
+  "num_epochs": 3,
+  "steps_per_epoch": 50000,
+  "batch_size": 1,
+  "description": "50K samples, 3 epochs, Single GPU (480x832x9)"
+}
