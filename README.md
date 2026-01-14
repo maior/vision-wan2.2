@@ -1,16 +1,112 @@
-# Wan2.2
+# Wan2.2 - Extended Training & Tools Fork
 
 <p align="center">
     <img src="assets/logo.png" width="400"/>
 <p>
 
+> **Note**: This is a fork of [Wan-Video/Wan2.2](https://github.com/Wan-Video/Wan2.2) with additional training utilities, data quality analysis tools, and LoRA fine-tuning capabilities.
+
 <p align="center">
-    💜 <a href="https://wan.video"><b>Wan</b></a> &nbsp&nbsp ｜ &nbsp&nbsp 🖥️ <a href="https://github.com/Wan-Video/Wan2.2">GitHub</a> &nbsp&nbsp  | &nbsp&nbsp🤗 <a href="https://huggingface.co/Wan-AI/">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/Wan-AI">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2503.20314">Paper</a> &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://wan.video/welcome?spm=a2ty_o02.30011076.0.0.6c9ee41eCcluqg">Blog</a> &nbsp&nbsp |  &nbsp&nbsp 💬  <a href="https://discord.gg/AKNgpMK4Yj">Discord</a>&nbsp&nbsp
+    💜 <a href="https://wan.video"><b>Wan</b></a> &nbsp&nbsp ｜ &nbsp&nbsp 🖥️ <a href="https://github.com/Wan-Video/Wan2.2">Original GitHub</a> &nbsp&nbsp  | &nbsp&nbsp🤗 <a href="https://huggingface.co/Wan-AI/">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/Wan-AI">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2503.20314">Paper</a> &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://wan.video/welcome?spm=a2ty_o02.30011076.0.0.6c9ee41eCcluqg">Blog</a> &nbsp&nbsp |  &nbsp&nbsp 💬  <a href="https://discord.gg/AKNgpMK4Yj">Discord</a>&nbsp&nbsp
     <br>
     📕 <a href="https://alidocs.dingtalk.com/i/nodes/jb9Y4gmKWrx9eo4dCql9LlbYJGXn6lpz">使用指南(中文)</a>&nbsp&nbsp | &nbsp&nbsp 📘 <a href="https://alidocs.dingtalk.com/i/nodes/EpGBa2Lm8aZxe5myC99MelA2WgN7R35y">User Guide(English)</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://gw.alicdn.com/imgextra/i2/O1CN01tqjWFi1ByuyehkTSB_!!6000000000015-0-tps-611-1279.jpg">WeChat(微信)</a>&nbsp&nbsp
 <br>
 
 -----
+
+## Fork Features
+
+This fork extends the original Wan2.2 repository with comprehensive tools for:
+
+### LoRA Fine-tuning
+- Training scripts for DiffSynth-based LoRA fine-tuning
+- Support for multiple resolutions (480x832, 704x1280, etc.)
+- V100/A100 GPU optimized training configurations
+- Real-time training monitoring utilities
+
+### Data Quality Analysis
+- Video/image quality validation tools
+- Caption quality assessment and enhancement
+- Statistical analysis for training datasets
+- Association rule mining for defective data detection
+
+### Web Dashboard
+- Real-time training progress monitoring
+- Data quality visualization
+- Frontend (Next.js) + Backend (FastAPI) architecture
+
+### Utilities
+- Dataset preprocessing and conversion tools
+- VAE latent precomputation scripts
+- Inference testing with Korean prompts
+- Video metrics calculation (FVD, etc.)
+
+## Project Structure
+
+```
+.
+├── docs/                    # Documentation
+│   ├── DIFFSYNTH_TRAINING_GUIDE.md
+│   ├── LORA_*.md           # LoRA training guides
+│   ├── DATA_QUALITY_*.md   # Data quality documentation
+│   └── ...
+├── tools/                   # Utility scripts
+│   ├── analyze_*.py        # Analysis tools
+│   ├── convert_*.py        # Data conversion
+│   ├── monitor_*.py        # Training monitors
+│   ├── preprocess_*.py     # Preprocessing utilities
+│   └── ...
+├── training/                # Training scripts
+│   ├── train_*.sh          # Shell scripts for training
+│   └── training_config.json
+├── scripts/                 # Dashboard scripts
+│   ├── start_all.sh
+│   └── ...
+├── services/                # Web dashboard
+│   ├── frontend/           # Next.js frontend
+│   └── backend/            # FastAPI backend
+└── wan/                     # Original Wan2.2 source
+```
+
+## Quick Start (Fork Features)
+
+### 1. LoRA Training with DiffSynth
+
+```bash
+# Prepare dataset
+python tools/convert_to_diffsynth_dataset.py
+
+# Start training (single GPU)
+bash training/train_diffsynth_480x832x9_1k_single.sh
+
+# Monitor training
+python tools/monitor_diffsynth_training.py
+```
+
+### 2. Data Quality Analysis
+
+```bash
+# Validate dataset quality
+python tools/validate_data_quality.py --input your_dataset.csv
+
+# Analyze defective samples
+python tools/analyze_defective_data.py
+```
+
+### 3. Web Dashboard
+
+```bash
+# Start all services
+bash scripts/start_all.sh
+
+# Access dashboard at http://localhost:3000
+```
+
+See [docs/DIFFSYNTH_TRAINING_GUIDE.md](docs/DIFFSYNTH_TRAINING_GUIDE.md) for detailed training instructions.
+
+-----
+
+## Original Wan2.2 Documentation
 
 [**Wan: Open and Advanced Large-Scale Video Generative Models**](https://arxiv.org/abs/2503.20314) <be>
 
