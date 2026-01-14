@@ -5,7 +5,7 @@ DataLoader 테스트
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 print("=" * 60)
 print("DataLoader 테스트")

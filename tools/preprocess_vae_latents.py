@@ -12,7 +12,7 @@ from tqdm import tqdm
 import logging
 
 # Add project root to path
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from wan import WanTI2V
 from wan.configs import WAN_CONFIGS

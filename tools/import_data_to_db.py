@@ -9,7 +9,7 @@ import pandas as pd
 from pathlib import Path
 
 # Backend 모듈 import를 위한 path 추가
-sys.path.insert(0, str(Path(__file__).parent / "services" / "backend"))
+sys.path.insert(0, str(Path(__file__).parent.parent / "services" / "backend"))
 
 from app.database import engine, Base, SessionLocal
 from app.database import DataSample, Statistics

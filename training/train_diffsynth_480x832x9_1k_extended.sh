@@ -9,7 +9,7 @@ cd /home/maiordba/projects/vision/diffsynth-studio
 source /home/maiordba/projects/vision/Wan2.2/.venv/bin/activate
 
 # Save training configuration for monitor
-cat > /home/maiordba/projects/vision/Wan2.2/training_config.json << 'EOF'
+cat > /home/maiordba/projects/vision/Wan2.2/training/training_config.json << 'EOF'
 {
   "total_samples": 1000,
   "num_gpus": 1,

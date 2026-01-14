@@ -7,7 +7,7 @@ import sys
 import torch
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 print("=" * 60)
 print("Forward Pass 테스트")
